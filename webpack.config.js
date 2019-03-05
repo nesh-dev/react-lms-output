@@ -14,7 +14,7 @@ module.exports = {
   entry: './client/index.js',
   output: {
     path: path.resolve('dist'),
-    publicPath: '/',
+    publicPath: '/dist/',
     filename: 'index_bundle.js'
   },
   module: {
