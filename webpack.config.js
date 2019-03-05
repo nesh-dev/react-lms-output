@@ -14,6 +14,7 @@ module.exports = {
   entry: './client/index.js',
   output: {
     path: path.resolve('dist'),
+    publicPath: '/',
     filename: 'index_bundle.js'
   },
   module: {
@@ -35,5 +36,10 @@ module.exports = {
       }
     ]
   }, 
-  plugins: [HtmlWebpackPluginConfig]
+  plugins: [HtmlWebpackPluginConfig], 
+  devServer: {
+    contentBase: './dist',
+    hot: true,
+    historyApiFallback: true,
+  }
 }
